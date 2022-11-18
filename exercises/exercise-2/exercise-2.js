@@ -70,3 +70,26 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function namesOfThePeopleWhoBelongToTheGryffindorHouse() {
+  hogwarts.forEach((someone) => {
+    const { firstName, lastName, house } = someone;
+    if (house === "Gryffindor") {
+      console.log(firstName + " " + lastName);
+    }
+  });
+}
+
+namesOfThePeopleWhoBelongToTheGryffindorHouse();
+
+// ---part two---//
+function namesOfTeachersWhoHavePets() {
+  hogwarts.forEach((teacher) => {
+    const { pet, occupation, firstName, lastName } = teacher;
+    if (pet && occupation === "Teacher") {
+      console.log(firstName + " " + lastName);
+    }
+  });
+}
+
+namesOfTeachersWhoHavePets();
